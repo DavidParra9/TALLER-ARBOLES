@@ -1,30 +1,31 @@
 class Node:
     def __init__(self,value):
         self.value = value
-        self._left = None
-        self._right = None
+        self.left = None
+        self.right = None
+
     @property
     def hasLeft(self):
-        return self._left is not None
+        return self.left is not None
     
     @property
     def hasRight(self):
-        return self._right is not None
+        return self.right is not None
 
     @property
     def left(self):
-        return self._left
+        return self.left
     
     @property
     def right(self):
-        return self._right
+        return self.right
     
-    def set_left(self, left):
-        self._left = left
+    def setleft(self, left):
+        self.left = left
         return self
     
-    def set_right(self,right):
-        self._right = right
+    def setright(self,right):
+        self.right = right
         return self
 
 def printTree(tree):
@@ -34,6 +35,14 @@ def printTree(tree):
         printTree(tree.right)
     print(tree.value)
 
-tree = Node()
+    elemento1 = Node(1)
+    elemento2 = Node(2)
+    elemento3 = Node(3)
+    elemento4 = Node(4)
+    elemento5 = Node(5)
 
-printTree(tree)
+    elemento1.setleft(elemento2)
+    elemento1.setright(elemento5)
+    elemento2.setleft(elemento3)
+    elemento2.setright(elemento4)
+
