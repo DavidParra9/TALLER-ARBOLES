@@ -1,3 +1,4 @@
+#David y Julian 2230047-2221885
 class Node:
     def __init__(self, value):
         self.value = value
